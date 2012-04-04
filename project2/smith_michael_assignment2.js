@@ -55,8 +55,10 @@ while (maxFliteTime > 0) {
 console.log("Time to land the plane.");
 
 
+var pilotsNames = ["Jack", "Nancy", "Al", "Jesus"];
+	flightQty = [3,1,2,3];
 
-
+for (var i = 0; i < 3; i++) {};
 
 
 
