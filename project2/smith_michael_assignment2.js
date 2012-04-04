@@ -45,22 +45,34 @@ if (safeLanding === true) {
 };
 */
 
+//Variable Assignments
+var maxFlightTime = 15;
+	pilotsNames = ["Jack", "Nancy", "Al", "Jesus"];
+	flightQty = [3,1,2,3];
 
-var maxFliteTime = 15;
-
-while (maxFliteTime > 0) {
-	console.log(maxFliteTime + "minutes left to fly.")
-	maxFliteTime -=5;
+// Number Function
+var getFlightTime = function () {
+	while (maxFlightTime > 0) {
+	console.log(maxFlightTime + "minutes left to fly.")
+	maxFlightTime -=5;
 };
+
+};
+getFlightTime()
 console.log("Time to land the plane.");
 
 
-var pilotsNames = ["Jack", "Nancy", "Al", "Jesus"];
-	flightQty = [3,1,2,3];
-
-for (var i = 0; i < 3; i++) {};
 
 
+// Array Function
+var getTotalPilotFlightTime = function () {
+	var maxFlightTime = 15
+	for (var i=0, p=pilotsNames.length, m=maxFlightTime; i < p; i++) {
+	console.log( pilotsNames[i] + " was flying for " + flightQty[i] * m + " minutes today.");
+};
 
+};
 
-alert("JavaScript works!");
+getTotalPilotFlightTime()
+
+//alert("JavaScript works!");
