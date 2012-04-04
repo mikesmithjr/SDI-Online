@@ -3,7 +3,7 @@
 // Story: Flying an Radio-Controlled Airplane
 
 
-
+/*
 // Variable Assignments
 
 var	weatherCondition = "Good";
@@ -43,7 +43,16 @@ if (safeLanding === true) {
 } else {
 	console.log("Back home for repairs.")
 };
+*/
 
+
+var maxFliteTime = 15;
+
+while (maxFliteTime > 0) {
+	console.log(maxFliteTime + "minutes left to fly.")
+	maxFliteTime -=5;
+};
+console.log("Time to land the plane.");
 
 
 
