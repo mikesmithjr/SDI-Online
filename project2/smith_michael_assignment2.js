@@ -26,21 +26,8 @@ if (planeStatus = "Loaded") {
 	console.log("Better get the epuipment loaded.");
 };
 
-// How long have you been in the air?
 
-if (flightTime >= 15) {
-	console.log("You are out of battery land quick before you crash!!!");
-} else {
-	console.log("You have a few more minutes of flying.");
-};
 
-// Did you land the plane safely?
-
-if (safeLanding === true) {
-	console.log("Let's fly again!!!");
-} else {
-	console.log("Back home for repairs.")
-};
 */
 
 //Variable Assignments
@@ -49,7 +36,6 @@ var maxFlightTime = 15;
 	flightQty = [3,1,2,3];
 	weatherCondition = "Good";
 	planeStatus = "Loaded"
-	safeLanding = true;
 
 // Procedure
 var getSunStatus = function (sunStatus) {
@@ -61,6 +47,16 @@ var getSunStatus = function (sunStatus) {
 getSunStatus("up")
 
 // Boolean Function
+var getWeatherStatus = function (outsideTemp) {
+	if (outsideTemp >= 70) {
+		console.log("The weather is great lets go flying!")
+	} else {
+		console.log("Lets wait a little while for it to warm up.")
+	};
+};
+
+getWeatherStatus(72)
+
 // Number Function
 var getFlightTime = function () {
 	while (maxFlightTime > 0) {
@@ -73,7 +69,11 @@ getFlightTime()
 console.log("Time to land the plane.");
 
 
+// String Function
+var getTodaysPilots = function () {
 
+
+};
 
 // Array Function
 var getTotalPilotFlightTime = function (maxFlightTime) {
@@ -85,8 +85,18 @@ var getTotalPilotFlightTime = function (maxFlightTime) {
 
 getTotalPilotFlightTime(15)
 
+// Boolean Function 2
 
+var getPlaneStatus = function (safeLanding) {
+	if (safeLanding === true) {
+	console.log("Let's fly again!!!");
+} else {
+	console.log("Back home for repairs.")
+};
 
+}
+
+getPlaneStatus(true)
 
 
 
