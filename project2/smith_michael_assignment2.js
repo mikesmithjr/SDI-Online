@@ -31,8 +31,7 @@ if (planeStatus = "Loaded") {
 */
 
 //Variable Assignments
-var maxFlightTime = 15;
-	pilotsNames = ["Jack", "Nancy", "Al", "Jesus"];
+var pilotsNames = ["Jack", "Nancy", "Al", "Jesus"];
 	flightQty = [3,1,2,3];
 	weatherCondition = "Good";
 	planeStatus = "Loaded"
@@ -58,32 +57,35 @@ var getWeatherStatus = function (outsideTemp) {
 getWeatherStatus(72)
 
 // Number Function
-var getFlightTime = function () {
+var getFlightTime = function (maxFlightTime) {
 	while (maxFlightTime > 0) {
 	console.log(maxFlightTime + "minutes left to fly.")
 	maxFlightTime -=5;
 };
 
 };
-getFlightTime()
+getFlightTime(15)
 console.log("Time to land the plane.");
 
 
 // String Function
-var getTodaysPilots = function () {
-
-
+var getTodaysAirstrip = function (airstripName) {
+	console.log(airstripName + " is a great place to fly");
 };
+getTodaysAirstrip("North Dallas RC Club")
+
+
 
 // Array Function
 var getTotalPilotFlightTime = function (maxFlightTime) {
 	for (var i=0, p=pilotsNames.length, m=maxFlightTime; i < p; i++) {
-	console.log( pilotsNames[i] + " was flying for " + flightQty[i] * m + " minutes today.");
+	console.log( pilotsNames[i] + " wants to fly for " + flightQty[i] * m + " minutes today.");
 };
 
 };
 
 getTotalPilotFlightTime(15)
+
 
 // Boolean Function 2
 
