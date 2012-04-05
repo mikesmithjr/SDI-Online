@@ -47,59 +47,78 @@ getSunStatus("up")
 
 // Boolean Function
 var getWeatherStatus = function (outsideTemp) {
+	var weatherStatus;
 	if (outsideTemp >= 70) {
-		console.log("The weather is great lets go flying!")
+		weatherStatus = "The weather is great lets go flying!";
+		return weatherStatus;
 	} else {
 		console.log("Lets wait a little while for it to warm up.")
 	};
 };
 
-getWeatherStatus(72)
+var outsideWeather = getWeatherStatus(75);
+console.log(outsideWeather)
 
 // Number Function
 var getFlightTime = function (maxFlightTime) {
+	var remainFlightTime;
 	while (maxFlightTime > 0) {
-	console.log(maxFlightTime + "minutes left to fly.")
 	maxFlightTime -=5;
+	remainFlightTime = maxFlightTime + "minutes left to fly.";
+	
+	//console.log(remainFlightTime);
+	return remainFlightTime;
 };
 
 };
-getFlightTime(15)
+//getFlightTime(15)
+var flightTime = getFlightTime(15);
+console.log(flightTime);
 console.log("Time to land the plane.");
 
 
 // String Function
 var getTodaysAirstrip = function (airstripName) {
-	console.log(airstripName + " is a great place to fly");
-};
-getTodaysAirstrip("North Dallas RC Club")
+	var todaysAirstrip;
+	todaysAirstrip = airstripName + " is a great place to fly";
 
+	return todaysAirstrip
+};
+var todaysAirfield = getTodaysAirstrip("North Dallas RC Club");
+console.log(todaysAirfield)
 
 
 // Array Function
 var getTotalPilotFlightTime = function (maxFlightTime) {
+	var pilotFlightTime;
 	for (var i=0, p=pilotsNames.length, m=maxFlightTime; i < p; i++) {
-	console.log( pilotsNames[i] + " wants to fly for " + flightQty[i] * m + " minutes today.");
+	//console.log( pilotsNames[i] + " wants to fly for " + flightQty[i] * m + " minutes today.");
+	pilotFlightTime =  pilotsNames[i] + " wants to fly for " + flightQty[i] * m + " minutes today.";
+
+	return pilotFlightTime;
 };
 
 };
-
-getTotalPilotFlightTime(15)
-
+var totalPilotFlightTime = getTotalPilotFlightTime(15);
+console.log(totalPilotFlightTime);
 
 // Boolean Function 2
 
 var getPlaneStatus = function (safeLanding) {
+	var planeStatus;
 	if (safeLanding === true) {
-	console.log("Let's fly again!!!");
+	planeStatus = "Let's fly again!!!";
+	return planeStatus;
 } else {
-	console.log("Back home for repairs.")
+	planeStatus = "Back home for repairs.";
+	return planeStatus;
+
 };
 
-}
+};
 
-getPlaneStatus(true)
-
+var myPlaneStatus = getPlaneStatus(true)
+console.log(myPlaneStatus)
 
 
 
