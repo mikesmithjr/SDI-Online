@@ -67,9 +67,9 @@ console.log(outsideWeather)
 var getFlightTime = function (maxFlightTime) {
 	var remainFlightTime;
 	while (maxFlightTime > 0) {
-	maxFlightTime -=5;
-	remainFlightTime = maxFlightTime + "minutes left to fly.";
 	
+	remainFlightTime = maxFlightTime + "minutes left to fly.";
+	maxFlightTime -=5;
 	//console.log(remainFlightTime);
 	return remainFlightTime;
 };
@@ -78,7 +78,15 @@ var getFlightTime = function (maxFlightTime) {
 //getFlightTime(15)
 var flightTime = getFlightTime(15);
 console.log(flightTime);
-console.log("Time to land the plane.");
+
+// String Function 2
+var getPilotList = function () {
+	var todaysPilots;
+	todaysPilots = pilotsNames + " want to go flying today.";
+	return todaysPilots;
+};
+var todaysPilotList = getPilotList();
+console.log(todaysPilotList)
 
 
 // String Function - done
@@ -86,7 +94,7 @@ var getTodaysAirstrip = function (airstripName) {
 	var todaysAirstrip;
 	todaysAirstrip = airstripName + " is a great place to fly";
 
-	return todaysAirstrip
+	return todaysAirstrip;
 };
 var todaysAirfield = getTodaysAirstrip("North Dallas RC Club");
 console.log(todaysAirfield)
