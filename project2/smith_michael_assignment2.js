@@ -10,14 +10,6 @@ var	weatherCondition = "Good";
 	planeStatus = "Loaded"
 	safeLanding = true;
 
-// How's the weather?
-
-if (weatherCondition = "Good") {
-	console.log('Let\'s go flying!');
-} else {
-	console.log('There won\'t be any flying today');
-};
-
 // Is the plane loaded in the truck?
 
 if (planeStatus = "Loaded") {
@@ -68,7 +60,7 @@ var getFlightTime = function (maxFlightTime) {
 	var remainFlightTime;
 	while (maxFlightTime > 0) {
 	
-	remainFlightTime = maxFlightTime + "minutes left to fly.";
+	remainFlightTime = "Each gets " + maxFlightTime + " minutes to fly today.";
 	maxFlightTime -=5;
 	//console.log(remainFlightTime);
 	return remainFlightTime;
@@ -79,10 +71,10 @@ var getFlightTime = function (maxFlightTime) {
 var flightTime = getFlightTime(15);
 console.log(flightTime);
 
-// String Function 2
+// String Function - done
 var getPilotList = function () {
 	var todaysPilots;
-	todaysPilots = pilotsNames + " want to go flying today.";
+	todaysPilots = pilotsNames[0] + ", " + pilotsNames[1] + ", " + pilotsNames[2] + " and " + pilotsNames[3] + " want to go flying today.";
 	return todaysPilots;
 };
 var todaysPilotList = getPilotList();
@@ -92,7 +84,7 @@ console.log(todaysPilotList)
 // String Function - done
 var getTodaysAirstrip = function (airstripName) {
 	var todaysAirstrip;
-	todaysAirstrip = airstripName + " is a great place to fly";
+	todaysAirstrip = "The " + airstripName + " is a great place to fly";
 
 	return todaysAirstrip;
 };
@@ -132,7 +124,9 @@ var getPlaneStatus = function (safeLanding) {
 var myPlaneStatus = getPlaneStatus(true)
 console.log(myPlaneStatus)
 
-
+console.log(outsideWeather + " " + todaysAirfield);
+console.log(todaysPilotList + " " + flightTime);
+console.log(totalPilotFlightTime + " " + myPlaneStatus);
 
 
 //alert("JavaScript works!");
