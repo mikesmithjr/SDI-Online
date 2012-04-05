@@ -3,24 +3,7 @@
 // Story: Flying an Radio-Controlled Airplane
 
 
-/*
-// Variable Assignments
 
-var	weatherCondition = "Good";
-	planeStatus = "Loaded"
-	safeLanding = true;
-
-// Is the plane loaded in the truck?
-
-if (planeStatus = "Loaded") {
-	console.log("Off to the flying field.");
-} else {
-	console.log("Better get the epuipment loaded.");
-};
-
-
-
-*/
 
 //Variable Assignments
 var pilotsNames = ["Jack", "Nancy", "Al", "Jesus"];
@@ -29,7 +12,7 @@ var pilotsNames = ["Jack", "Nancy", "Al", "Jesus"];
 	weatherCondition = "Good";
 	planeStatus = "Loaded"
 
-// Procedure - done
+// Procedure
 var getSunStatus = function (sunStatus) {
 	if (sunStatus = "up") { 
 		console.log("Get out of bed!");
@@ -41,7 +24,7 @@ var getSunStatus = function (sunStatus) {
 
 getSunStatus("up")
 
-// Boolean Function - done
+// Boolean Function
 var getWeatherStatus = function (outsideTemp) {
 	var weatherStatus;
 	if (outsideTemp >= 70) {
@@ -71,7 +54,7 @@ var getFlightTime = function (maxFlightTime) {
 var flightTime = getFlightTime(15);
 console.log(flightTime);
 
-// String Function - done
+// String Function 
 var getPilotList = function () {
 	var todaysPilots;
 	todaysPilots = pilotsNames[0] + ", " + pilotsNames[1] + ", " + pilotsNames[2] + " and " + pilotsNames[3] + " want to go flying today.";
@@ -81,7 +64,7 @@ var todaysPilotList = getPilotList();
 console.log(todaysPilotList)
 
 
-// String Function - done
+// String Function 
 var getTodaysAirstrip = function (airstripName) {
 	var todaysAirstrip;
 	todaysAirstrip = "The " + airstripName + " is a great place to fly";
@@ -92,7 +75,7 @@ var todaysAirfield = getTodaysAirstrip("North Dallas RC Club");
 console.log(todaysAirfield)
 
 
-// Array Function - done
+// Array Function 
 var getTotalPilotFlightTime = function (maxFlightTime) {
 	var pilotFlightTime;
 	for (var i=0, p=pilotsNames.length, m=maxFlightTime; i < p; i++) {
@@ -106,7 +89,7 @@ var getTotalPilotFlightTime = function (maxFlightTime) {
 var totalPilotFlightTime = getTotalPilotFlightTime();
 console.log(totalPilotFlightTime);
 
-// Boolean Function 2 - done
+// Boolean Function 2 
 
 var getPlaneStatus = function (safeLanding) {
 	var planeStatus;
@@ -129,4 +112,4 @@ console.log(todaysPilotList + " " + flightTime);
 console.log(totalPilotFlightTime + " " + myPlaneStatus);
 
 
-//alert("JavaScript works!");
+alert("JavaScript works!");
