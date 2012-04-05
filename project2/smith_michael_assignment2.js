@@ -8,8 +8,6 @@
 
 var	weatherCondition = "Good";
 	planeStatus = "Loaded"
-	maxFliteTime = 15;
-	flightTime = 10;
 	safeLanding = true;
 
 // How's the weather?
@@ -49,7 +47,20 @@ if (safeLanding === true) {
 var maxFlightTime = 15;
 	pilotsNames = ["Jack", "Nancy", "Al", "Jesus"];
 	flightQty = [3,1,2,3];
+	weatherCondition = "Good";
+	planeStatus = "Loaded"
+	safeLanding = true;
 
+// Procedure
+var getSunStatus = function (sunStatus) {
+	if (sunStatus = "up") { "Get out of bed!"
+	}
+	else {"Stay in Bed and sleep"};
+};
+
+getSunStatus("up")
+
+// Boolean Function
 // Number Function
 var getFlightTime = function () {
 	while (maxFlightTime > 0) {
@@ -65,14 +76,20 @@ console.log("Time to land the plane.");
 
 
 // Array Function
-var getTotalPilotFlightTime = function () {
-	var maxFlightTime = 15
+var getTotalPilotFlightTime = function (maxFlightTime) {
 	for (var i=0, p=pilotsNames.length, m=maxFlightTime; i < p; i++) {
 	console.log( pilotsNames[i] + " was flying for " + flightQty[i] * m + " minutes today.");
 };
 
 };
 
-getTotalPilotFlightTime()
+getTotalPilotFlightTime(15)
+
+
+
+
+
+
+
 
 //alert("JavaScript works!");
