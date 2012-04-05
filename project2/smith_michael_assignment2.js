@@ -103,7 +103,7 @@ var getTotalPilotFlightTime = function (maxFlightTime) {
 };
 
 };
-var totalPilotFlightTime = getTotalPilotFlightTime(15);
+var totalPilotFlightTime = getTotalPilotFlightTime();
 console.log(totalPilotFlightTime);
 
 // Boolean Function 2 - done
