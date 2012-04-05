@@ -32,20 +32,24 @@ if (planeStatus = "Loaded") {
 
 //Variable Assignments
 var pilotsNames = ["Jack", "Nancy", "Al", "Jesus"];
-	flightQty = [3,1,2,3];
+	maxFlightQtyPerPilot = [3];
+
 	weatherCondition = "Good";
 	planeStatus = "Loaded"
 
-// Procedure
+// Procedure - done
 var getSunStatus = function (sunStatus) {
-	if (sunStatus = "up") { "Get out of bed!"
+	if (sunStatus = "up") { 
+		console.log("Get out of bed!");
 	}
-	else {"Stay in Bed and sleep"};
+	else {
+		console.log("Stay in Bed and sleep");
+	};
 };
 
 getSunStatus("up")
 
-// Boolean Function
+// Boolean Function - done
 var getWeatherStatus = function (outsideTemp) {
 	var weatherStatus;
 	if (outsideTemp >= 70) {
@@ -77,7 +81,7 @@ console.log(flightTime);
 console.log("Time to land the plane.");
 
 
-// String Function
+// String Function - done
 var getTodaysAirstrip = function (airstripName) {
 	var todaysAirstrip;
 	todaysAirstrip = airstripName + " is a great place to fly";
@@ -88,12 +92,12 @@ var todaysAirfield = getTodaysAirstrip("North Dallas RC Club");
 console.log(todaysAirfield)
 
 
-// Array Function
+// Array Function - done
 var getTotalPilotFlightTime = function (maxFlightTime) {
 	var pilotFlightTime;
 	for (var i=0, p=pilotsNames.length, m=maxFlightTime; i < p; i++) {
-	//console.log( pilotsNames[i] + " wants to fly for " + flightQty[i] * m + " minutes today.");
-	pilotFlightTime =  pilotsNames[i] + " wants to fly for " + flightQty[i] * m + " minutes today.";
+	
+	pilotFlightTime =  pilotsNames[i] + " can fly for " + maxFlightQtyPerPilot * m + " minutes today.";
 
 	return pilotFlightTime;
 };
@@ -102,7 +106,7 @@ var getTotalPilotFlightTime = function (maxFlightTime) {
 var totalPilotFlightTime = getTotalPilotFlightTime(15);
 console.log(totalPilotFlightTime);
 
-// Boolean Function 2
+// Boolean Function 2 - done
 
 var getPlaneStatus = function (safeLanding) {
 	var planeStatus;
