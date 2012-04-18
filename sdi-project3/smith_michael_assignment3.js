@@ -8,7 +8,13 @@
 var planeNames = ["Super Cub", "Extra 300", "The Beast"];
 var	maxFlightQtyPerPilot = [3];
 var	weatherCondition = "Good";
-var	planeStatus = "Loaded"
+var	planeStatus = "Loaded";
+var pilotsNames = ["Joaquin", "Al", "Gary"];
+
+
+
+
+
 
 // Procedure
 var getSunStatus = function (sunStatus) {
@@ -46,17 +52,34 @@ var getTodaysAirstrip = function (airstripName) {
 var todaysAirfield = getTodaysAirstrip("North Dallas RC Club");
 console.log(todaysAirfield)
 
+
+// Array Function
+var pilotList = [];
+var getPilotList = function (json) {
+	for (var i = 0; i < json.pilots.length; i++){
+		var pilot = json.pilots.name[i];
+		pilotList.push(json.pilots.name[i])
+	};
+return pilotList;
+};
+getPilotList(json);
+console.log(pilotList);
+console.log(pilotList + " want to fly today.");
+
+
+
+
 //JSON Data
 
-var pilotsList = function (json) {
+var pilotsExperienceList = function (json) {
 	for (var i = 0; i < json.pilots.length; i++){
 		var pilot = json.pilots[i];
 		console.log(pilot.name + " is a " + pilot.flyingExperience 
-					+ " skilled pilot and can fly for " + pilot.flightTime + " minutes.");
+					+ " skilled pilot and can fly for " + pilot.flightTime + " minutes per flight.");
 	};
 };
 
-pilotsList(json);
+pilotsExperienceList(json);
 
 // String Function 
 var getPlaneList = function () {
