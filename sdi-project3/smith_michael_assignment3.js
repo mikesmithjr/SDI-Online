@@ -4,6 +4,12 @@
 
 
 
+//Global Variables
+var planeNames = ["Super Cub", "Extra 300", "The Beast"];
+var	maxFlightQtyPerPilot = [3];
+var	weatherCondition = "Good";
+var	planeStatus = "Loaded"
+
 // Procedure
 var getSunStatus = function (sunStatus) {
 	if (sunStatus = "up") { 
@@ -51,6 +57,17 @@ var pilotsList = function (json) {
 };
 
 pilotsList(json);
+
+// String Function 
+var getPlaneList = function () {
+	var todaysPlanes;
+	todaysPlanes =  "The " + planeNames[0] + ", " + planeNames[1] + " and " + planeNames[2] + " are loaded to go flying.";
+	return todaysPlanes;
+};
+var todaysPlaneList = getPlaneList();
+console.log(todaysPlaneList)
+
+
 
 
 // Boolean Function 2 
