@@ -8,7 +8,6 @@
 //Variable Assignments
 var pilotsNames = ["Jack", "Nancy", "Al", "Jesus"];
 	maxFlightQtyPerPilot = [3];
-
 	weatherCondition = "Good";
 	planeStatus = "Loaded"
 
