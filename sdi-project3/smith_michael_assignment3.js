@@ -46,14 +46,20 @@ var outsideWeather = getWeatherStatus(75);
 console.log(outsideWeather)
 
 // String Function 
-var getTodaysAirstrip = function (airstripName) {
-	var todaysAirstrip;
-	todaysAirstrip = "The " + airstripName + " is a great place to fly";
+var airfield = {
+			getTodaysAirstrip: function (airstripName) {
+			var todaysAirstrip;
+			todaysAirstrip = "The " + airstripName + " is a great place to fly";
 
-	return todaysAirstrip;
+			//return todaysAirstrip,
+			//todaysAirfield = airfield.getTodaysAirstrip("North Dallas RC Club");
+				//console.log(todaysAirfield);
+			}
+			
+			
+			
 };
-var todaysAirfield = getTodaysAirstrip("North Dallas RC Club");
-console.log(todaysAirfield)
+airfield.getTodaysAirstrip("North Dallas RC Club");
 
 
 var runway = {
@@ -61,7 +67,8 @@ var runway = {
 	direction: "East-West",
 	open: true,
 	getStatus: function (runwayStatus) {
-	if (runwayStatus = true) {console.log("Runway " + runway.id + " going " + runway.direction + " is open for flight");
+	if (runwayStatus = true) {console.log("Runway " + runway.id + " going " + 
+								runway.direction + " is open for flight");
 	} else {console.log("We have to wait for the runway.")};
 
 	}
