@@ -17,16 +17,17 @@ var pilotsNames = ["Joaquin", "Al", "Gary"];
 
 
 // Procedure
-var getSunStatus = function (sunStatus) {
+var wakingUp = {
+	getSunStatus: function (sunStatus) {
 	if (sunStatus = "up") { 
 		console.log("Get out of bed!");
 	}
 	else {
 		console.log("Stay in Bed and sleep")
-	};
+	}
 }
-
-getSunStatus("up")
+};
+wakingUp.getSunStatus("up");
 
 
 
@@ -58,13 +59,14 @@ console.log(todaysAirfield)
 var runway = {
 	id: "01",
 	direction: "East-West",
-	open: false,
+	open: true,
 	getStatus: function (runwayStatus) {
 	if (runwayStatus = true) {console.log("Runway " + runway.id + " going " + runway.direction + " is open for flight");
-	} else {console.log("bye")};
+	} else {console.log("We have to wait for the runway.")};
 
 	}
 };
+runway.getStatus();
 runway.id = "Main";
 runway.getStatus();
 
@@ -88,7 +90,7 @@ var getPlaneList = function () {
 	return todaysPlanes;
 };
 var todaysPlaneList = getPlaneList();
-console.log(todaysPlaneList)
+console.log(todaysPlaneList);
 
 // Number Function
 var getFlightTime = function (maxFlightTime) {
