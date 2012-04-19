@@ -54,9 +54,22 @@ var getTodaysAirstrip = function (airstripName) {
 var todaysAirfield = getTodaysAirstrip("North Dallas RC Club");
 console.log(todaysAirfield)
 
-
-
-
+// Runway Object
+var runways = {
+		runway: [ 
+			{
+				id: "01",
+				direction: "East-West",
+				open: true
+			},
+			{
+				id: "02",
+				direction: "North-South",
+				open: true
+			}
+		]
+};
+console.log(runways);
 
 //JSON Data
 
