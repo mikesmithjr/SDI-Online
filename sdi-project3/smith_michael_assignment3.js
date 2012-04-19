@@ -50,16 +50,18 @@ var airfield = {
 			getTodaysAirstrip: function (airstripName) {
 			var todaysAirstrip;
 			todaysAirstrip = "The " + airstripName + " is a great place to fly";
+			return todaysAirstrip;
+		},
+			
+			
+			};
 
-			//return todaysAirstrip,
-			//todaysAirfield = airfield.getTodaysAirstrip("North Dallas RC Club");
-				//console.log(todaysAirfield);
-			}
-			
-			
-			
-};
 airfield.getTodaysAirstrip("North Dallas RC Club");
+		console.log(todaysAirstrip);
+
+			
+
+//airfield.getTodaysAirstrip("North Dallas RC Club");
 
 
 var runway = {
