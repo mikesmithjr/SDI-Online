@@ -22,11 +22,13 @@ var getSunStatus = function (sunStatus) {
 		console.log("Get out of bed!");
 	}
 	else {
-		console.log("Stay in Bed and sleep");
+		console.log("Stay in Bed and sleep")
 	};
-};
+}
 
 getSunStatus("up")
+
+
 
 // Boolean Function
 var getWeatherStatus = function (outsideTemp) {
@@ -53,19 +55,6 @@ var todaysAirfield = getTodaysAirstrip("North Dallas RC Club");
 console.log(todaysAirfield)
 
 
-// Array Function
-var pilotList = [];
-var getPilotList = function (json) {
-	for (var i = 0; i < json.pilots.length; i++){
-		var pilot = json.pilots.name[i];
-		pilotList.push(json.pilots.name[i])
-	};
-return pilotList;
-};
-getPilotList(json);
-console.log(pilotList);
-console.log(pilotList + " want to fly today.");
-
 
 
 
@@ -90,7 +79,21 @@ var getPlaneList = function () {
 var todaysPlaneList = getPlaneList();
 console.log(todaysPlaneList)
 
+// Number Function
+var getFlightTime = function (maxFlightTime) {
+	var remainFlightTime;
+	while (maxFlightTime > 0) {
+	
+	remainFlightTime = "Each gets " + maxFlightTime + " minutes to fly today.";
+	maxFlightTime -=5;
+	//console.log(remainFlightTime);
+	return remainFlightTime;
+};
 
+};
+//getFlightTime(15)
+var flightTime = getFlightTime(15);
+console.log(flightTime);
 
 
 // Boolean Function 2 
