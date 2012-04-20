@@ -51,14 +51,14 @@ var airfield = {
 			var todaysAirstrip;
 			todaysAirstrip = "The " + airstripName + " is a great place to fly";
 			return todaysAirstrip;
+			console.log(todaysAirstrip);
 		},
 			
 			
 			};
 
 airfield.getTodaysAirstrip("North Dallas RC Club");
-		console.log(todaysAirstrip);
-
+console.log(airfield.getTodaysAirstrip("North Dallas RC Club"));
 			
 
 //airfield.getTodaysAirstrip("North Dallas RC Club");
@@ -102,20 +102,21 @@ var todaysPlaneList = getPlaneList();
 console.log(todaysPlaneList);
 
 // Number Function
-var getFlightTime = function (maxFlightTime) {
-	var remainFlightTime;
-	while (maxFlightTime > 0) {
-	
-	remainFlightTime = "Each gets " + maxFlightTime + " minutes to fly today.";
-	maxFlightTime -=5;
-	//console.log(remainFlightTime);
-	return remainFlightTime;
+var flightTime = {
+	getFlightTime: function (maxFlightTime) {
+		var remainFlightTime;
+		while (maxFlightTime > 0) {	
+		remainFlightTime = "Each gets " + maxFlightTime + " minutes to fly today.";
+		maxFlightTime -=5;
+		//console.log(remainFlightTime);
+		return remainFlightTime;
 };
 
+}
 };
 //getFlightTime(15)
-var flightTime = getFlightTime(15);
-console.log(flightTime);
+flightTime.getFlightTime(15);
+console.log(flightTime.getFlightTime(15));
 
 
 // Boolean Function 2 
@@ -133,8 +134,8 @@ var getPlaneStatus = function (safeLanding) {
 
 };
 
-var myPlaneStatus = getPlaneStatus(true)
-console.log(myPlaneStatus)
+var myPlaneStatus = getPlaneStatus(false);
+console.log(myPlaneStatus);
 
 
 
