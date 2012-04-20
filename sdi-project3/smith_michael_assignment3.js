@@ -32,7 +32,8 @@ wakingUp.getSunStatus("up");
 
 
 // Boolean Function
-var getWeatherStatus = function (outsideTemp) {
+var weather = {
+	getWeatherStatus: function (outsideTemp) {
 	var weatherStatus;
 	if (outsideTemp >= 70) {
 		weatherStatus = "The weather is great lets go flying!";
@@ -40,10 +41,10 @@ var getWeatherStatus = function (outsideTemp) {
 	} else {
 		console.log("Lets wait a little while for it to warm up.")
 	};
+}
 };
-
-var outsideWeather = getWeatherStatus(75);
-console.log(outsideWeather)
+weather.getWeatherStatus(75);
+console.log(weather.getWeatherStatus(75));
 
 // String Function 
 var airfield = {
@@ -61,7 +62,6 @@ airfield.getTodaysAirstrip("North Dallas RC Club");
 console.log(airfield.getTodaysAirstrip("North Dallas RC Club"));
 			
 
-//airfield.getTodaysAirstrip("North Dallas RC Club");
 
 
 var runway = {
@@ -121,7 +121,8 @@ console.log(flightTime.getFlightTime(15));
 
 // Boolean Function 2 
 
-var getPlaneStatus = function (safeLanding) {
+var planeCondition = {
+	getPlaneStatus: function (safeLanding) {
 	var planeStatus;
 	if (safeLanding === true) {
 	planeStatus = "Let's fly again!!!";
@@ -132,10 +133,10 @@ var getPlaneStatus = function (safeLanding) {
 
 };
 
+}
 };
-
-var myPlaneStatus = getPlaneStatus(false);
-console.log(myPlaneStatus);
+planeCondition.getPlaneStatus(true);
+console.log(planeCondition.getPlaneStatus(true));
 
 
 
