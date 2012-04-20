@@ -63,7 +63,7 @@ console.log(airfield.getTodaysAirstrip("North Dallas RC Club"));
 			
 
 
-
+// Runway Function
 var runway = {
 	id: "01",
 	direction: "East-West",
@@ -93,13 +93,16 @@ var pilotsExperienceList = function (json) {
 pilotsExperienceList(json);
 
 // String Function 
-var getPlaneList = function () {
+var planes = {
+	getPlaneList: function () {
 	var todaysPlanes;
 	todaysPlanes =  "The " + planeNames[0] + ", " + planeNames[1] + " and " + planeNames[2] + " are loaded to go flying.";
 	return todaysPlanes;
+}
 };
-var todaysPlaneList = getPlaneList();
-console.log(todaysPlaneList);
+
+planes.getPlaneList();
+console.log(planes.getPlaneList());
 
 // Number Function
 var flightTime = {
