@@ -8,7 +8,7 @@
 
 var mikesLib = function () {
 
-	checkEmail = function (emailAddress) {
+	var checkEmail = function (emailAddress) {
 		var email = emailAddress
 		var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,4}$/
 		if (emailPattern.test(email)) {
@@ -20,11 +20,27 @@ var mikesLib = function () {
 	};
 	return {
 		"checkEmail": checkEmail
-	};	
+	};
+
+	var checkPhoneNum = function (testPhoneNumber) {
+		var phoneNumber = testPhoneNumber;
+		var pattern = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+		if (pattern.test(phoneNumber)) {
+			var validPhoneNumber = phoneNumber.replace(pattern, "($1) $2-$3");
+			console.log(phoneNumber + " is a valid phone number.");
+		} else {
+			console.log(phoneNumber + " is not a valid phone number.");
+		}
+
+	};
+	return {
+		"checkPhoneNum" : checkPhoneNum
+	};
+
+
 
 };
 
-mikesLib.checkEmail("snuffyms@gmail.com");
 
 
 
