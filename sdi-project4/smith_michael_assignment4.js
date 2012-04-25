@@ -37,13 +37,16 @@ var mikesLib = function () {
 		"checkPhoneNum" : checkPhoneNum
 	};
 
-
+	var formatMoney = function(amount) {
+		var money = amount;
+		money.toFixed(2);
+		console.log(money.toFixed(2));
+	};
+	return {
+		"formatMoney" : formatMoney
+	};
 
 };
-
-
-
-
 
 
 
