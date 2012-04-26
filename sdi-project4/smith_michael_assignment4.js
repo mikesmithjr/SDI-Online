@@ -62,7 +62,7 @@ var mikesLib = function () {
 			return "This is a secure https url.";
 		}
 		if (url.charAt(4) == ":") {
-			return "This is a standard http url."
+			return "This is a standard http url.";
 		};
 	};
 
@@ -73,9 +73,6 @@ var mikesLib = function () {
 			return initial.toUpperCase();
 		});
 	};
-
-	};
-
 	return {
 		"checkEmail": checkEmail,
 		"checkPhoneNum" : checkPhoneNum,
@@ -87,12 +84,20 @@ var mikesLib = function () {
 };
 
 
-
-
-
-
-
-
+var lib = mikesLib();
+var email = "mikesmithjr@fullsail.edu";
+var phone = "877-437-6349";
+var money = 12.368
+var dayCountFirst = "April 25, 1979"; 
+var dayCountSecond = "April 25, 2012";
+var url = "https://www.fullsail.edu";
+var caseChange = "josh donlan";
+console.log(lib.checkEmail(email));
+console.log(lib.checkPhoneNum(phone));
+console.log(lib.formatMoney(money));
+console.log(lib.getNumberOfDays(dayCountFirst, dayCountSecond));
+console.log(lib.testUrl(url));
+console.log(lib.changeCase(caseChange));
 
 
 
