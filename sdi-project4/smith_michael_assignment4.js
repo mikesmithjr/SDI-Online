@@ -67,13 +67,14 @@ var mikesLib = function () {
 	};
 
 
-
-
-
-
-
 	//Sixth Function
+	var changeCase = function (changeThis) {
+		return changeThis.replace(/\b([a-z])/g, function (_, initial) {
+			return initial.toUpperCase();
+		});
+	};
 
+	};
 
 	return {
 		"checkEmail": checkEmail,
@@ -81,10 +82,9 @@ var mikesLib = function () {
 		"formatMoney" : formatMoney,
 		"getNumberOfDays" : getNumberOfDays,
 		"testUrl" : testUrl,
+		"changeCase" : changeCase
 	};
 };
-
-
 
 
 
