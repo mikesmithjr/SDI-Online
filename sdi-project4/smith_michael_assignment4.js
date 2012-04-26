@@ -13,15 +13,13 @@ var mikesLib = function () {
 		var email = emailAddress
 		var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,4}$/
 		if (emailPattern.test(email)) {
-			console.log(email + " is a valid email address.");
+			return email + " is a valid email address.";
 		} else {
-			console.log(email + " is not a valid email address.");
+			return email + " is not a valid email address.";
 		};
 		
 	};
-	return {
-		"checkEmail": checkEmail
-	};
+	
 
 	//Second Function
 	var checkPhoneNum = function (testPhoneNumber) {
@@ -29,39 +27,61 @@ var mikesLib = function () {
 		var pattern = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 		if (pattern.test(phoneNumber)) {
 			var validPhoneNumber = phoneNumber.replace(pattern, "($1) $2-$3");
-			console.log(phoneNumber + " is a valid phone number.");
+			return phoneNumber + " is a valid phone number.";
 		} else {
-			console.log(phoneNumber + " is not a valid phone number.");
+			return phoneNumber + " is not a valid phone number.";
 		}
 
 	};
-	return {
-		"checkPhoneNum" : checkPhoneNum
-	};
+	
 
 	//Third Function
 	var formatMoney = function (amount) {
 		var money = amount;
 		money.toFixed(2);
-		console.log(money.toFixed(2));
+		return money.toFixed(2);
 	};
-	return {
-		"formatMoney" : formatMoney
-	};
+	
 
 	//Fourth Function
 	var getNumberOfDays = function (firstDate, secondDate) {
 		var dayOne = new Date(firstDate);
 		var dayTwo = new Date(secondDate);
 		var lengthOfDay = 1000 * 60 * 60 * 24;
-		console.log(Math.floor((dayTwo.getTime() - dayOne.getTime()) / (lengthOfDay)) + " days have past.");
+		return Math.floor((dayTwo.getTime() - dayOne.getTime()) / (lengthOfDay)) + " days have past.";
 	};
-	return {
-		"getNumberOfDays" : getNumberOfDays
-	};
+	
 
 	//Fifth Function
+	var testUrl = function (urlToTest) {
+		var url = urlToTest;
+		var urlPattern = /^(http[s]?:\/\/){0,1}(www\.){0,1}[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,5}[\.]{0,1}/;
+		var urlTest = urlPattern.test(url);
+		return "This url is " + urlTest + ".";
+		if (url.charAt(4) == "s") {
+			return "This is a secure https url.";
+		}
+		if (url.charAt(4) == ":") {
+			return "This is a standard http url."
+		};
+	};
+
+
+
+
+
+
+
 	//Sixth Function
+
+
+	return {
+		"checkEmail": checkEmail,
+		"checkPhoneNum" : checkPhoneNum,
+		"formatMoney" : formatMoney,
+		"getNumberOfDays" : getNumberOfDays,
+		"testUrl" : testUrl,
+	};
 };
 
 
@@ -79,4 +99,4 @@ var mikesLib = function () {
 
 
 
-//alert("JavaScript works!");
+alert("JavaScript works!");
