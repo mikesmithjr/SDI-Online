@@ -48,7 +48,7 @@ var mikesLib = function () {
 		var dayOne = new Date(firstDate);
 		var dayTwo = new Date(secondDate);
 		var lengthOfDay = 1000 * 60 * 60 * 24;
-		return Math.floor((dayTwo.getTime() - dayOne.getTime()) / (lengthOfDay)) + " days have past.";
+		return Math.floor((dayTwo.getTime() - dayOne.getTime()) / (lengthOfDay)) + " days have past between " + firstDate + " and " + secondDate + ".";
 	};
 	
 
